@@ -1,0 +1,21 @@
+
+.cards {
+  display: flex;
+  width: 60%;
+  gap: 10px;
+  flex-wrap: wrap;
+  .card {
+    flex: 1 1 300px;
+    background-color: yellow;
+    border: 1px solid black;
+
+    img {
+      max-width: 200px;
+      max-height: 100px;
+      display: block;
+      margin: 0 auto;
+      padding-top: 10px;
+    }
+  }
+}
+

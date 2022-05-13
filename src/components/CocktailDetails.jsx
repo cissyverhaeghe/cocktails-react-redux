@@ -8,9 +8,27 @@ const CocktailDetails = ({ id }) => {
       {isError && <p>er is een error</p>}
       {isLoading && <p>Loading...</p>}
       {data &&
-        data.drinks.map(({ idDrink, strDrink }) => (
-          <p key={idDrink}>{strDrink}</p>
-        ))}
+        data.drinks.map(
+          ({
+            strIngredient1,
+            strIngredient2,
+            strIngredient3,
+            strDrink,
+            strInstructions,
+            strDrinkThumb,
+          }) => (
+            <div>
+              <h1>{strDrink}</h1>
+              <img alt="cocktail" src={strDrinkThumb}></img>
+              <p>INGREDIENTS:</p>
+              <p>{strIngredient1}</p>
+              <p>{strIngredient2}</p>
+              <p>{strIngredient3}</p>
+              <p>INSTRUCTIONS:</p>
+              <p>{strInstructions}</p>
+            </div>
+          )
+        )}
     </>
   );
 };

@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   section {
     width: 65%;
     .cards {
@@ -11,8 +12,9 @@
       flex-wrap: wrap;
       .card {
         flex: 1 1 250px;
-        background-color: yellow;
+        background-color: rgb(228, 232, 228);
         border: 1px solid black;
+        padding: 5px;
     
         img {
           max-width: 200px;
@@ -27,7 +29,16 @@
 
   aside {
     width: 35%;
-    background-color: green;
+    background-color: rgb(228, 232, 228);
+    border: 1px solid black;
+    padding: 5px;
+    img {
+      max-width: 500px;
+      max-height: 400px;
+      display: block;
+      margin: 0 auto;
+      
+    }
   }
 }
 

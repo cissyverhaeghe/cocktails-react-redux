@@ -45,11 +45,12 @@ const App = () => {
             ))}
         </div>
       </section>
-      <aside>{cocktailId && <CocktailDetails id={cocktailId} />}</aside>
+      <aside>
+        {cocktailId == null && <p>Please pick your cocktail</p>}
+        {cocktailId && <CocktailDetails id={cocktailId} />}
+      </aside>
     </>
   );
-
-  // return <CocktailDetails id={11007} />;
 };
 
 export default App;

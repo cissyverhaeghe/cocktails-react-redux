@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const App = () => {
   const [input, setInput] = useState("");
-  const [cocktailId, setCocktailId] = useState(0);
+  const [cocktailId, setCocktailId] = useState(null);
 
   const { data, isLoading, isError } = useGetCocktailsByInputQuery(input);
 
@@ -45,7 +45,7 @@ const App = () => {
             ))}
         </div>
       </section>
-      <aside>{<CocktailDetails id={cocktailId} />}</aside>
+      <aside>{cocktailId && <CocktailDetails id={cocktailId} />}</aside>
     </>
   );
 

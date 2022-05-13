@@ -1,21 +1,35 @@
 
-.cards {
+#root{
   display: flex;
-  width: 60%;
-  gap: 10px;
-  flex-wrap: wrap;
-  .card {
-    flex: 1 1 300px;
-    background-color: yellow;
-    border: 1px solid black;
-
-    img {
-      max-width: 200px;
-      max-height: 100px;
-      display: block;
-      margin: 0 auto;
-      padding-top: 10px;
+  justify-content: space-between;
+  gap: 20px;
+  section {
+    width: 65%;
+    .cards {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      .card {
+        flex: 1 1 250px;
+        background-color: yellow;
+        border: 1px solid black;
+    
+        img {
+          max-width: 200px;
+          max-height: 100px;
+          display: block;
+          margin: 0 auto;
+          padding-top: 10px;
+        }
+      }
     }
   }
+
+  aside {
+    width: 35%;
+    background-color: green;
+  }
 }
+
+
 

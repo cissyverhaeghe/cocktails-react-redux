@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 const App = () => {
   const [input, setInput] = useState("");
+  const [cocktailId, setCocktailId] = useState(0);
 
   const { data, isLoading, isError } = useGetCocktailsByInputQuery(input);
 
@@ -34,13 +35,18 @@ const App = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" className="btn btn-primary">
+                <a
+                  href="#"
+                  className="btn btn-primary"
+                  onClick={() => setCocktailId(idDrink)}
+                >
                   Details
                 </a>
               </div>
             </div>
           ))}
       </div>
+      {<CocktailDetails id={cocktailId} />}
     </>
   );
 
